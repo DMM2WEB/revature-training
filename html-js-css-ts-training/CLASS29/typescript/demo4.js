@@ -1,0 +1,41 @@
+var a;
+a = 10;
+a = 'A';
+a = true;
+a = 10.0;
+var b;
+b = 10;
+//b = 'A';
+var c = 10;
+c = 20;
+//c = 'A';
+var d;
+var e;
+var f;
+var g;
+var h = [1, true, 'A', 10.00];
+var k = [1, 2, 3];
+var colorRed = 10;
+var colorBlue = 20;
+var Colors;
+(function (Colors) {
+    Colors[Colors["Red"] = 0] = "Red";
+    Colors[Colors["Blue"] = 1] = "Blue";
+    Colors[Colors["Green"] = 2] = "Green";
+})(Colors || (Colors = {}));
+console.log(Colors.Blue);
+var Days;
+(function (Days) {
+    Days[Days["Monday"] = 0] = "Monday";
+    Days[Days["Tuesday"] = 1] = "Tuesday";
+    Days[Days["Wednesday"] = 2] = "Wednesday";
+    Days[Days["Thursday"] = 3] = "Thursday";
+    Days[Days["Friday"] = 4] = "Friday";
+})(Days || (Days = {}));
+Days.Friday;
+var Gender;
+(function (Gender) {
+    Gender[Gender["Male"] = 100] = "Male";
+    Gender[Gender["Female"] = 200] = "Female";
+})(Gender || (Gender = {}));
+console.log(Gender.Male);

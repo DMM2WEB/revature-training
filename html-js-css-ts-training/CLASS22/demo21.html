@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <button id="save">Save Data</button>
+    <button id="get">Get Data</button>
+
+    <script>
+        document.getElementById('save').addEventListener('click', () => {
+            //var firstName = 'Mathew'
+            //localStorage.setItem('name', firstName)
+
+            var employee = {
+                id: 1, 
+                firstName: 'Mark',
+                lastName: 'Evangelist',
+                email: 'm@mail.com'
+            }
+            localStorage.setItem('data', JSON.stringify(employee))
+        })
+
+        document.getElementById('get').addEventListener('click', () => {
+            var name = localStorage.getItem('name')
+            document.getElementById('result').innerHTML = name
+
+            var data = localStorage.getItem('data');
+            console.log(data)
+            var employee = JSON.parse(data);
+            console.log(employee)
+            console.log(employee.firstName)
+            document.getElementById('result').innerHTML = employee.firstName
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Modify Array elements</h2>
+    <h2 id="original"></h2>
+    <h2 id="updated"></h2>
+
+    <script>
+        var fruits = ['apple', 'banana', 'orange']
+        document.getElementById("original").innerHTML = "Original: " + fruits;
+        fruits[2] = 'mango';
+        document.getElementById("updated").innerHTML = "Update: " + fruits;
+        
+    </script>
+</body>
+</html>

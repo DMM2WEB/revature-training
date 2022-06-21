@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arithmetic Operator</h2>
+    <h2 id="result"></h2>
+
+    <script>
+        var a = 10;
+        a += 5; //15
+        var b = a;
+
+        var c = 7;
+        c *= 8; //56
+        var d = c;
+
+        document.getElementById('result').innerHTML = 
+        `
+        New value of a : ${b} <br>
+        New value of c : ${d} <br>
+        `
+    </script>
+</body>
+</html>

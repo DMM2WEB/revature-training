@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(typeof ""); //string
+        console.log(typeof 'c'); //string
+        console.log(typeof 'Christ'); // string
+        console.log(typeof 10); //number
+        console.log(typeof 12.34); //number
+
+        var a;
+        console.log(typeof a); //undefined
+
+        var b = null;
+        console.log(typeof b);
+
+        console.log(typeof true);
+
+        var person = {
+            firstName: 'Peter',
+            lastName: 'Pan'
+        }
+
+        console.log(typeof person);
+
+        function sum(a,b) {
+            return a + b
+        }
+
+        console.log(typeof sum);
+        
+    </script>
+</body>
+</html>

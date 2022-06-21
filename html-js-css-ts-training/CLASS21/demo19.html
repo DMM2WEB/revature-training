@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array shift and unshift</h2>
+    <button onclick="shiftItem()">Shift</button>
+    <button onclick="unshiftItem()">Unshift</button>
+    <h2 id="result"></h2>
+
+    <script>
+        var courses = ['java', 'mysql', 'html', 'javascript']
+        document.getElementById('result').innerHTML = "Original courses are: " + courses
+
+        function shiftItem() {
+            courses.shift()
+            document.getElementById('result').innerHTML = "Courses after shift: " + courses
+        }
+
+        function unshiftItem() {
+            courses.unshift('c', 'c++')
+            document.getElementById('result').innerHTML = "Courses after unshift: " + courses
+        }
+        
+    </script>
+</body>
+</html>

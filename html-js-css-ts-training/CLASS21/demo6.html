@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arithmetic Operator</h2>
+    <h2 id="result"></h2>
+
+    <script>
+        var firstName = 'Peter';
+        var lastName = 'Pan';
+
+        var fullName = firstName + '' + lastName
+        var fullName = `${firstName} ${lastName}`
+
+        var a = 20;
+        var b = 10;
+        var sum = a + b;
+        var sub = a - b;
+        var mul = a * b;
+        var div = a / b;
+        var mode = a % b;
+
+        document.getElementById('result').innerHTML =
+        `
+        Add = ${sum} <br>
+        Subtract = ${sub} <br>
+        Multiple = ${mul} <br>
+        Divide = ${div} <br>
+        Remainder for 20/10 = ${mode}
+        `
+    </script>
+</body>
+</html>

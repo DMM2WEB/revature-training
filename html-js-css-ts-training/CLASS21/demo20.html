@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array splice</h2>
+    <button onclick="myFunction()">Splice</button>
+    <h2 id="result1"></h2>
+    <h2 id="result2"></h2>
+    <h2 id="result3"></h2>
+    
+    <script>
+        var numbers = ['one', 'two', 'three', 'four', 'nine', 'ten'];
+        document.getElementById('result').innerHTML = "Original array: " + numbers;
+
+        function myFunction() {
+            var removed = numbers.splice(2, 2, 'five', 'six');
+            document.getElementById('result2').innerHTML = "New array: " + numbers;
+            document.getElementById('result3').innerHTML = "Removed items: " + removed;
+        }
+        
+    </script>
+</body>
+</html>

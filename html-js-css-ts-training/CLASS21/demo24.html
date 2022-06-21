@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>See Array and establish Mr. or Mrs.</h2>
+
+    <h2 id="result1"></h2>
+    <h2 id="result2"></h2>
+
+    <script>
+        var employees = [
+            {id: 1, name: "Mathew", gender: "male"},
+            {id: 2, name: "Mark", gender: "male"},
+            {id: 3, name: "Mary", gender: "female"},
+            {id: 4, name: "Luke", gender: "male"},
+            {id: 5, name: "John", gender: "male"},
+        ];
+
+        //document.getElementById('result1').innerHTML = employees
+
+        /*var empList = employees.map(emp => transform(emp));
+
+        function transform(emp) {
+            if (emp.gender == "male") {
+                return "Mr." + emp.name;
+            } else {
+                return "Mrs." + emp.name;
+            }
+        }*/
+
+        var empList = employees.map(emp => emp.gender == 'male' ? 'Mr.' + emp.name : 'Mrs.' + emp.name)
+
+        document.getElementById('result2').innerHTML = empList
+        
+    </script>
+</body>
+</html>
