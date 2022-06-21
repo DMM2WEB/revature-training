@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Exercise 1: Setter injection -->
+    <bean class="com.dmm.Student" name="student1">
+        <property name="studentId">
+            <value>101</value>
+        </property>
+        <property name="studentName">
+            <value>Mathew</value>
+        </property>
+        <property name="studentEmail">
+            <value>mathew@mail.com</value>
+        </property>
+    </bean>
+
+    <!-- Exercise 2: Setter injection using value as attribute and P schema -->
+    <bean class="com.dmm.Student" name="student2">
+        <property name="studentId" value="201"/>
+        <property name="studentName" value="Mark"/>
+        <property name="studentEmail" value="mark@mail.com"/>
+    </bean>
+
+    <bean class="com.dmm.Student" name="student3"
+          p:studentId="301"
+          p:studentName="Luke"
+          p:studentEmail="luke@mail.com"/>
+
+    <!-- Exercise 3: Setter injection with collection type -->
+    <bean class="com.dmm.Employee" name="employee1">
+        <property name="name" value="John"/>
+        <property name="phones">
+            <list>
+                <value>1111111111</value>
+                <value>2222222222</value>
+                <value>3333333333</value>
+            </list>
+        </property>
+        <property name="address">
+            <list>
+                <value>USA</value>
+                <value>Brazil</value>
+                <value>India</value>
+            </list>
+        </property>
+        <property name="departments">
+            <map>
+                <entry key="admin" value="USA"/>
+                <entry key="sales" value="Brazil"/>
+                <entry key="IT" value="India"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- Exercise 4: Setter injection using ref type -->
+    <bean class="com.dmm.Address" name="address1">
+        <property name="city" value="NY"/>
+        <property name="country" value="USA"/>
+    </bean>
+
+    <bean class="com.dmm.Customer" name="customer1">
+        <property name="customerId" value="101"/>
+        <property name="name" value="Benedict"/>
+        <property name="address" ref="address1"/>
+    </bean>
+
+    <!-- Exercise 5: constructor injection -->
+    <bean class="com.dmm.User" name="user1">
+        <constructor-arg name="id" value="1001"/>
+        <constructor-arg name="name" value="Peter"/>
+        <constructor-arg name="email" value="peter@mail.com"/>
+    </bean>
+    <bean class="com.dmm.Category" name="category1">
+        <constructor-arg name="catId" value="1001"/>
+        <constructor-arg name="catName" value="Laptop"/>
+    </bean>
+    <bean class="com.dmm.Product" name="product1">
+        <constructor-arg name="proId" value="1001"/>
+        <constructor-arg name="proName" value="laptop1001"/>
+        <constructor-arg name="category" ref="category1"/>
+    </bean>
+
+    <!-- Exercise 6: constructor ambiguity -->
+    <bean class="com.dmm.Calculator" name="calculator1">
+        <constructor-arg value="100" type="int" index="0"/>
+        <constructor-arg value="200" type="int" index="1"/>
+    </bean>
+
+</beans>
